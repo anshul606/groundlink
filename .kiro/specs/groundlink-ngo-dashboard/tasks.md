@@ -253,6 +253,22 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - Ensure all tests pass, ask the user if questions arise
   - _Requirements: 11.1, 11.2, 11.3_
 
+## Git Workflow
+
+After completing each task:
+
+1. Stage changes: `git add .`
+2. Commit with descriptive message: `git commit -m "feat: [task description]"`
+3. Push to GitHub: `git push origin main`
+
+Use conventional commit format:
+
+- `feat:` for new features
+- `fix:` for bug fixes
+- `test:` for adding tests
+- `refactor:` for code refactoring
+- `docs:` for documentation updates
+
 ## Notes
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP
@@ -262,3 +278,4 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
 - Unit tests validate specific examples and edge cases
 - The implementation uses TypeScript throughout as specified in the design
 - All API endpoints use Next.js Route Handlers following Next.js App Router conventions
+- **Git commits should be made after each completed task to maintain version control**
