@@ -17,6 +17,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - Create types file with all interfaces: FieldReportInput, StructuredReport, Volunteer, VolunteerMatch, APIError, GroqResponse
   - Include validation rules as TypeScript types with proper constraints
   - Add JSDoc comments documenting each interface
+  - Commit and push: `git add . && git commit -m "feat: add TypeScript type definitions and data models" && git push origin main`
   - _Requirements: 10.2, 10.5, 11.5_
 
 - [ ] 3. Implement core utility functions
@@ -39,6 +40,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - [ ]\* 3.5 Write property test for unavailable volunteer filtering
     - **Property 16: Unavailable Volunteer Filtering**
     - **Validates: Requirements 4.7, 8.5**
+  - Commit and push: `git add . && git commit -m "feat: implement core utility functions and tests" && git push origin main`
 
 - [ ] 4. Implement /api/process-report endpoint
   - [ ] 4.1 Create Route Handler at app/api/process-report/route.ts
@@ -79,11 +81,13 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
     - Test very long report text (10,000+ characters)
     - Test error response structure includes status code and message
     - _Requirements: 7.1, 7.4, 11.3_
+  - Commit and push: `git add . && git commit -m "feat: implement /api/process-report endpoint with Groq AI integration" && git push origin main`
 
 - [ ] 5. Checkpoint - Ensure API processing works
   - Test /api/process-report with sample field reports
   - Verify structured data is returned correctly
   - Ensure all tests pass, ask the user if questions arise
+  - Commit and push: `git add . && git commit -m "test: verify API processing checkpoint" && git push origin main`
 
 - [ ] 6. Implement /api/match-volunteers endpoint
   - [ ] 6.1 Create Route Handler at app/api/match-volunteers/route.ts
@@ -116,11 +120,13 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
     - Test no available volunteers returns empty array
     - Test single volunteer matching
     - _Requirements: 8.1_
+  - Commit and push: `git add . && git commit -m "feat: implement /api/match-volunteers endpoint with ranking logic" && git push origin main`
 
 - [ ] 7. Create demo data
   - Create lib/demo-data.ts with 3-5 sample field reports as strings
   - Create 5-8 sample volunteers with varied skills, locations, and availability
   - Ensure demo data represents realistic NGO scenarios
+  - Commit and push: `git add . && git commit -m "feat: add demo data with sample reports and volunteers" && git push origin main`
   - _Requirements: 9.1, 9.2, 9.4_
 
 - [ ] 8. Implement landing page
@@ -135,6 +141,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
     - Test landing page displays correct text
     - Test CTA button exists and links to dashboard
     - _Requirements: 6.1, 6.2, 6.3_
+  - Commit and push: `git add . && git commit -m "feat: implement landing page with dark mode design" && git push origin main`
 
 - [ ] 9. Implement dashboard page and state management
   - [ ] 9.1 Create app/dashboard/page.tsx
@@ -155,6 +162,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
     - **Validates: Requirements 3.3**
   - [ ]\* 9.5 Write unit test for dashboard displays input section
     - _Requirements: 5.1_
+  - Commit and push: `git add . && git commit -m "feat: implement dashboard page with state management and API integration" && git push origin main`
 
 - [ ] 10. Create report input component
   - [ ] 10.1 Create components/report-input.tsx
@@ -176,6 +184,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
     - Test file upload component renders when enabled
     - Test submit button disabled during loading
     - _Requirements: 1.1, 2.1_
+  - Commit and push: `git add . && git commit -m "feat: create report input component with validation" && git push origin main`
 
 - [ ] 11. Create reports list component
   - [ ] 11.1 Create components/reports-list.tsx
@@ -189,12 +198,14 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - [ ]\* 11.2 Write property test for priority reason display
     - **Property 10: Priority Reason Display**
     - **Validates: Requirements 3.4, 3.5**
+  - Commit and push: `git add . && git commit -m "feat: create reports list component with severity indicators" && git push origin main`
 
 - [ ] 12. Create priority insights component
   - Create components/priority-insights.tsx
   - Aggregate data to show highest-impact issues across all reports
   - Display patterns and critical needs
   - Use shadcn/ui components for visual presentation
+  - Commit and push: `git add . && git commit -m "feat: create priority insights component" && git push origin main`
   - _Requirements: 5.3, 10.4_
 
 - [ ] 13. Create AI insights panel component
@@ -202,6 +213,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - Display analysis and patterns from processed reports
   - Show system-level observations
   - Use shadcn/ui components
+  - Commit and push: `git add . && git commit -m "feat: create AI insights panel component" && git push origin main`
   - _Requirements: 5.4, 10.4_
 
 - [ ] 14. Create volunteer recommendations component
@@ -215,6 +227,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - [ ]\* 14.2 Write property test for volunteer recommendations display
     - **Property 17: Volunteer Recommendations Display**
     - **Validates: Requirements 5.5**
+  - Commit and push: `git add . && git commit -m "feat: create volunteer recommendations component" && git push origin main`
 
 - [ ] 15. Integrate all components in dashboard
   - Wire report input component to dashboard state
@@ -224,24 +237,29 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - Wire volunteer recommendations component with match data
   - Implement demo data loading functionality
   - Ensure all components receive correct props and update on state changes
+  - Commit and push: `git add . && git commit -m "feat: integrate all components in dashboard" && git push origin main`
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 9.3_
 
 - [ ]\* 16. Write property test for demo data loading
   - **Property 19: Demo Data Loading**
   - **Validates: Requirements 9.3**
+  - Commit and push: `git add . && git commit -m "test: add property test for demo data loading" && git push origin main`
 
 - [ ]\* 17. Write property test for API input validation
   - **Property 20: API Input Validation**
   - **Validates: Requirements 11.4**
+  - Commit and push: `git add . && git commit -m "test: add property test for API input validation" && git push origin main`
 
 - [ ]\* 18. Write property test for API error response structure
   - **Property 18: API Error Response Structure**
   - **Validates: Requirements 7.4, 11.3**
+  - Commit and push: `git add . && git commit -m "test: add property test for API error response structure" && git push origin main`
 
 - [ ]\* 19. Write integration tests
   - Test end-to-end flow: submit report → process → display
   - Test end-to-end flow: process report → match volunteers → display recommendations
   - Test demo data loading populates all UI sections
+  - Commit and push: `git add . && git commit -m "test: add integration tests for end-to-end flows" && git push origin main`
   - _Requirements: 9.3_
 
 - [ ] 20. Final checkpoint - End-to-end testing
@@ -251,6 +269,7 @@ This implementation plan breaks down the Groundlink NGO Dashboard into sequentia
   - Test volunteer matching with various scenarios
   - Verify error handling for invalid inputs
   - Ensure all tests pass, ask the user if questions arise
+  - Commit and push: `git add . && git commit -m "test: complete final end-to-end testing checkpoint" && git push origin main`
   - _Requirements: 11.1, 11.2, 11.3_
 
 ## Git Workflow
